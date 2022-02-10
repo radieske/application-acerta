@@ -4,10 +4,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "preview": "vite preview"
+  },
+  "engines": {
+    "npm": "8.1.2",
+    "node": "16.13.2"
   },
   "dependencies": {
     "axios": "^0.25.0",
@@ -18,9 +19,7 @@
     "react-input-mask": "^2.0.4",
     "react-router-dom": "^6.2.1",
     "styled-components": "^5.3.3",
-    "yup": "^0.32.11",
-    "@types/node": "^16.13.2"
-    
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
