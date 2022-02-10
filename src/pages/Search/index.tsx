@@ -36,12 +36,12 @@ function Search() {
 
     async function fnDeleteLead(id: number) {
         try {
-            const { status, response } = await api.delete(`leads/${id}`);
+            const { status, data } = await api.delete(`leads/${id}`);
 
             if (status === 200) {
                 searchLeads();
             } else {
-                console.error('Failed to register lead', response.data);
+                console.error('Failed to register lead', data);
             }
         } catch (err) {
             console.error('Failed to register lead', err)

@@ -45,13 +45,13 @@ function Register() {
         try {
             lead.cpf = lead.cpf.replace(/\D/g, '')
             debugger;
-            const { status, response } = id ? await api.put(`leads/${id}`, lead) : await api.post('leads', lead);
+            const { status, data } = id ? await api.put(`leads/${id}`, lead) : await api.post('leads', lead);
 
             if (status === 201 || status === 200) {
                 debugger;
                 navigate('/');
             } else {
-                console.error('Ocorreu uma falha ao cadastrar o lead', response.data);
+                console.error('Ocorreu uma falha ao cadastrar o lead', data);
             }
         } catch (err) {
             console.error('Ocorreu uma falha ao cadastrar o lead', err)
